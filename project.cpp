@@ -265,7 +265,7 @@ glEnd();
 
 void carRU()//object_id : carRU1
 {
-//RED CAR
+//
 glBegin(GL_QUADS);
 glColor3f(1.0, 0.0, 0.3);
 glVertex2f(0.45, -0.56);
@@ -899,44 +899,8 @@ void metroline()//object_id : metroline1
     glEnd();
 }
 
-
-
-void display()//object_id : display1
+void goCarUp() //id = goCarUp1
 {
-    glClearColor(0, 0.765, 1,0.8) ;
-    glClear(GL_COLOR_BUFFER_BIT);
-    glMatrixMode(GL_MODELVIEW);
-    road();
-    metroline();
-    treeLeft();
-    drawBase();
-    glPushMatrix();
-
-    glTranslatef(0.30f, 0.0f, 0.0f);
-    glRotatef(rotorAngle, 0.0f, 0.0f, 1.0f);
-    glTranslatef(-0.30f, 0.0f, 0.0f);
-
-    drawBlades();
-
-    glPopMatrix();
-
-    treeRight();
-    buildingRight();
-
-    buildingLeft();
-    billboard();
-    streetLight();
-    buildingR();
-
-
-
-    //cloud------------------------------------------------------
-    glPushMatrix();
-    glTranslatef(cloud_right, 0.0, 0.0);
-    clouds();
-    glPopMatrix();
-    //car-up
-
     if(car_right_key==1){
         glPushMatrix();
         glTranslatef(car_right, 0.0, 0.0);
@@ -952,10 +916,10 @@ void display()//object_id : display1
         carLU();
 
     }
+}
 
-
-    //car-down
-
+void goCarDown() //id = goCarDown1
+{
     if(car_left_key==1){
         glPushMatrix();
         glTranslatef(car_left, 0.0, 0.0);
@@ -968,9 +932,11 @@ void display()//object_id : display1
     }
     if(car_left_key==0){
         carRD();
-        carLD();
-    }
-    //baloon
+        carLD(); }
+}
+
+void GoBaloon() //id= GoBaloon1
+{
     if(baloon_left_key==1){
         glPushMatrix();
         glTranslatef(baloon_left, 0.0, 0.0);
@@ -981,10 +947,11 @@ void display()//object_id : display1
     if(baloon_left_key==0){
         hotAirBalloons();
     }
+}
 
-    //metro rail
-
-    if(rail_left_key==1){
+void GoMetro()// id= GoMetro1
+{
+     if(rail_left_key==1){
         glPushMatrix();
         glTranslatef(rail_left, 0.0, 0.0);
         metroRail();
@@ -994,9 +961,57 @@ void display()//object_id : display1
     if(rail_left_key==0){
         metroRail();
     }
+}
 
+void GoWindmill()//GoWindmill1
+{
+    drawBase();
+    glPushMatrix();
 
+    glTranslatef(0.30f, 0.0f, 0.0f);
+    glRotatef(rotorAngle, 0.0f, 0.0f, 1.0f);
+    glTranslatef(-0.30f, 0.0f, 0.0f);
 
+    drawBlades();
+
+    glPopMatrix();
+}
+
+void GoCloud() //id= GoCloud1
+{
+    glPushMatrix();
+    glTranslatef(cloud_right, 0.0, 0.0);
+    clouds();
+    glPopMatrix();
+}
+
+void staticobj() // id = staticobj1
+{
+    road();
+    metroline();
+    treeLeft();
+    treeRight();
+    buildingRight();
+    buildingLeft();
+    billboard();
+    streetLight();
+    buildingR();
+}
+void display()//object_id : display1
+{
+    glClearColor(0, 0.765, 1,0.8) ;
+    glClear(GL_COLOR_BUFFER_BIT);
+    glMatrixMode(GL_MODELVIEW);
+    //no movement
+    staticobj();
+    //Auto move
+    GoCloud();//cloud
+    GoWindmill();//WIND MILL
+    //manual move
+    goCarUp();//upper lane car
+    goCarDown();//lower lane car
+    GoBaloon();//baloons
+    GoMetro();//metro rail
 
     glFlush();
 }
