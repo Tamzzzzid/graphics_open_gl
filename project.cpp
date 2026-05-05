@@ -19,8 +19,9 @@ float rail_left_key=1;
 float rotorAngle = 0.0f;
 
 
-void circle(float radius, float xc, float yc, float r, float g, float b)
+void circle(float radius, float xc, float yc, float r, float g, float b)//object_id : circle1
 {
+  //circle
   glBegin(GL_POLYGON);
   for(int i=0;i<200;i++)
   {
@@ -33,7 +34,9 @@ void circle(float radius, float xc, float yc, float r, float g, float b)
 }
 
 
-void carLD() {
+void carLD()//object_id : carLD1
+{
+//PURPLE CAR
 glBegin(GL_QUADS);
 glColor3f(0.5, 0.2, 0.7);
 glVertex2f(-0.60, -0.78);
@@ -112,7 +115,9 @@ glVertex2f(-0.445, -0.83);
 glEnd();
 }
 
-void carLU() {
+void carLU()//object_id : carLU1
+{
+//TRUCK
 glBegin(GL_QUADS);
 glColor3f(0.9, 0.5, 0.1);
 glVertex2f(-0.68, -0.42);
@@ -174,7 +179,10 @@ glVertex2f(-0.40, -0.42);
 glVertex2f(-0.40, -0.60);
 glEnd();
 }
-void carRD() {
+
+void carRD()//object_id : carRD1
+{
+//BLUE CAR
 glBegin(GL_QUADS);
 glColor3f(0.2, 0.5, 0.8);
 glVertex2f(0.37, -0.82);
@@ -254,7 +262,10 @@ glVertex2f(0.75, -0.75);
 glVertex2f(0.75, -0.82);
 glEnd();
 }
-void carRU() {
+
+void carRU()//object_id : carRU1
+{
+//RED CAR
 glBegin(GL_QUADS);
 glColor3f(1.0, 0.0, 0.3);
 glVertex2f(0.45, -0.56);
@@ -333,7 +344,9 @@ glVertex2f(0.68, -0.56);
 glEnd();
 }
 
-void road(){
+void road()//object_id : road1
+{
+//road
 glBegin(GL_QUADS);
 glColor3f(0.0, 0.7, 0.0);
 glVertex2f(-1.0, -0.4);
@@ -361,7 +374,9 @@ glEnd();
 }
 
 
-void drawBase() {
+void drawBase()//object_id : drawBase1
+{
+    //drawBase
     // The static tower
     glBegin(GL_QUADS);
     glColor3f(0.6, 0.6, 0.6);
@@ -372,7 +387,9 @@ void drawBase() {
     glEnd();
 }
 
-void drawBlades() {
+void drawBlades()//object_id : drawBlades1
+{
+    //drawBlades
     // Blade 1 (Top)
     glBegin(GL_QUADS);
     glColor3f(0.8, 0.8, 0.8);
@@ -401,7 +418,9 @@ void drawBlades() {
     glEnd();
 }
 
-void treeLeft() {
+void treeLeft()//object_id : treeLeft1
+{
+//treeLeft
 glBegin(GL_QUADS);
 glColor3f(0.5, 0.3, 0.1);
 glVertex2f(0.10, -0.40);
@@ -425,7 +444,9 @@ glVertex2f(0.125, -0.11);
 glEnd();
 }
 
-void treeRight() {
+void treeRight()//object_id : treeRight1
+{
+//treeRight
 glBegin(GL_QUADS);
 glColor3f(0.5, 0.3, 0.1);
 glVertex2f(0.50, -0.40);
@@ -449,7 +470,9 @@ glVertex2f(0.52, -0.10);
 glEnd();
 }
 
-void buildingRight() {
+void buildingRight()//object_id : buildingRight1
+{
+//buildingRight
 glBegin(GL_QUADS);
 glColor3f(0.7, 0.4, 0.3);
 glVertex2f(0.66, -0.40);
@@ -521,7 +544,9 @@ glEnd();
 }
 
 
-void buildingLeft() {
+void buildingLeft()//object_id : buildingLeft1
+{
+//buildingLeft
 glBegin(GL_QUADS);
 glColor3f(0.5, 0.6, 0.7);
 glVertex2f(-1.0, -0.40);
@@ -589,7 +614,9 @@ glVertex2f(-0.65, 0.32);
 glEnd();
 }
 
-void billboard() {
+void billboard()//object_id : billboard1
+{
+//billboard
 glBegin(GL_QUADS);
 glColor3f(0.3, 0.3, 0.3);
 glVertex2f(-0.58, -0.40);
@@ -623,7 +650,9 @@ glVertex2f(-0.60, 0.06);
 glEnd();
 }
 
-void streetLight() {
+void streetLight()//object_id : streetLight1
+{
+//streetLight
 glBegin(GL_QUADS);
 glColor3f(0.2, 0.2, 0.2);
 glVertex2f(-0.46, -0.40);
@@ -649,7 +678,9 @@ glVertex2f(-0.40, 0.13);
 glEnd();
 }
 
-void buildingR() {
+void buildingR()//object_id : buildingR1
+{
+//middle building
 glBegin(GL_POLYGON);
 glColor3f(0.4, 0.6, 0.5);
 glVertex2f(-0.25, -0.40);
@@ -721,7 +752,9 @@ glEnd();
 }
 
 
-void clouds() {
+void clouds()//object_id : clouds1
+{
+//clouds
 circle(0.04, -0.75, 0.90, 255, 255, 255);
 circle(0.05, -0.70, 0.92, 255, 255, 255);
 circle(0.04, -0.65, 0.88, 255, 255, 255);
@@ -737,7 +770,9 @@ circle(0.05, 0.22, 0.84, 255, 255, 255);
 
 
 
-void hotAirBalloons() {
+void hotAirBalloons()//object_id : hotAirBalloons1
+{
+//hotAirBalloons
 circle(0.06, -0.40, 0.85, 200, 50, 50);
 
 glBegin(GL_QUADS);
@@ -776,8 +811,9 @@ glVertex2f(0.50, 0.81);
 glEnd();
 }
 
-void metroRail() {
-
+void metroRail()//object_id : metroRail1
+{
+//metroRail
 
 glBegin(GL_QUADS);
 glColor3f(0.2, 0.2, 0.2);
@@ -851,7 +887,9 @@ circle(0.02, 0.28, 0.42, 50, 50, 50);
 circle(0.02, 0.45, 0.42, 50, 50, 50);
 }
 
-void metroline() {
+void metroline()//object_id : metroline1
+{
+    //metroline
     glBegin(GL_QUADS);
     glColor3f(0.3, 0.3, 0.3);
     glVertex2f(-1.0, 0.38);
@@ -861,119 +899,129 @@ void metroline() {
     glEnd();
 }
 
-void moveobj(){
-
-}
-
-void display() {
-glClearColor(0, 0.765, 1,0.8) ;
-glClear(GL_COLOR_BUFFER_BIT);
-glMatrixMode(GL_MODELVIEW);
-road();
-metroline();
-treeLeft();
-drawBase();
-glPushMatrix();
-
-glTranslatef(0.30f, 0.0f, 0.0f);
-glRotatef(rotorAngle, 0.0f, 0.0f, 1.0f);
-glTranslatef(-0.30f, 0.0f, 0.0f);
-
-drawBlades();
-
-glPopMatrix();
-
-treeRight();
-buildingRight();
-
-buildingLeft();
-billboard();
-streetLight();
-buildingR();
 
 
-
-//cloud------------------------------------------------------
-glPushMatrix();
-glTranslatef(cloud_right, 0.0, 0.0);
-clouds();
-glPopMatrix();
-//car-up
-if(car_right_key==1){
+void display()//object_id : display1
+{
+    glClearColor(0, 0.765, 1,0.8) ;
+    glClear(GL_COLOR_BUFFER_BIT);
+    glMatrixMode(GL_MODELVIEW);
+    road();
+    metroline();
+    treeLeft();
+    drawBase();
     glPushMatrix();
-    glTranslatef(car_right, 0.0, 0.0);
-    carRU();
-    carLU();
+
+    glTranslatef(0.30f, 0.0f, 0.0f);
+    glRotatef(rotorAngle, 0.0f, 0.0f, 1.0f);
+    glTranslatef(-0.30f, 0.0f, 0.0f);
+
+    drawBlades();
+
     glPopMatrix();
 
-}
-if(car_right_key==0){
-    carRU();
-    carLU();
+    treeRight();
+    buildingRight();
 
-}
+    buildingLeft();
+    billboard();
+    streetLight();
+    buildingR();
 
 
-//car-down
 
-if(car_left_key==1){
+    //cloud------------------------------------------------------
     glPushMatrix();
-    glTranslatef(car_left, 0.0, 0.0);
-    carRD();
-    carLD();
+    glTranslatef(cloud_right, 0.0, 0.0);
+    clouds();
     glPopMatrix();
+    //car-up
 
+    if(car_right_key==1){
+        glPushMatrix();
+        glTranslatef(car_right, 0.0, 0.0);
+        //red car
+        carRU();
+        //truck
+        carLU();
+        glPopMatrix();
+
+    }
+    if(car_right_key==0){
+        carRU();
+        carLU();
+
+    }
+
+
+    //car-down
+
+    if(car_left_key==1){
+        glPushMatrix();
+        glTranslatef(car_left, 0.0, 0.0);
+        //blue car
+        carRD();
+        //violet car
+        carLD();
+        glPopMatrix();
+
+    }
+    if(car_left_key==0){
+        carRD();
+        carLD();
+    }
+    //baloon
+    if(baloon_left_key==1){
+        glPushMatrix();
+        glTranslatef(baloon_left, 0.0, 0.0);
+        hotAirBalloons();
+        glPopMatrix();
+
+    }
+    if(baloon_left_key==0){
+        hotAirBalloons();
+    }
+
+    //metro rail
+
+    if(rail_left_key==1){
+        glPushMatrix();
+        glTranslatef(rail_left, 0.0, 0.0);
+        metroRail();
+        glPopMatrix();
+
+    }
+    if(rail_left_key==0){
+        metroRail();
+    }
+
+
+
+
+    glFlush();
 }
-if(car_left_key==0){
-    carRD();
-    carLD();
-}
-//baloon
-if(baloon_left_key==1){
-    glPushMatrix();
-    glTranslatef(baloon_left, 0.0, 0.0);
-    hotAirBalloons();
-    glPopMatrix();
 
-}
-if(baloon_left_key==0){
-    hotAirBalloons();
-}
-
-//metro rail
-
-if(rail_left_key==1){
-    glPushMatrix();
-    glTranslatef(rail_left, 0.0, 0.0);
-    metroRail();
-    glPopMatrix();
-
-}
-if(rail_left_key==0){
-    metroRail();
-}
-
-
-
-
-glFlush();
-}
-
-void update(int a){
+void update(int a)//object_id : update1
+{
+    //auto animation
     rotorAngle -= 8.0f;
     cloud_right += 0.005;
+    //car up
     if(car_right_key==1){
 
         car_right += 0.02;
     }
+    //car down
     if(car_left_key==1){
 
         car_left -= 0.02;
     }
+    //baloon
     if(baloon_left_key==1){
 
         baloon_left -= 0.002;
     }
+    //metro rail
     if(rail_left_key==1){
 
         rail_left -= 0.05;
@@ -1007,7 +1055,8 @@ void update(int a){
     glutTimerFunc(20, update, 0);
 }
 
-void handleKeypress(unsigned char key, int x, int y) {
+void handleKeypress(unsigned char key, int x, int y)//object_id : Keypress
+{
     switch(key) {
         case 'a': car_right_key = 1; break;
         case 's': car_right_key = 0; break;
@@ -1018,7 +1067,8 @@ void handleKeypress(unsigned char key, int x, int y) {
     }
     glutPostRedisplay();
 }
-void handleMouse(int button, int state, int x, int y) {
+void handleMouse(int button, int state, int x, int y)//object_id : Mouse
+{
 
     if (state == GLUT_DOWN) {
 
@@ -1034,7 +1084,8 @@ void handleMouse(int button, int state, int x, int y) {
         glutPostRedisplay();
     }
 }
-int main(int argc, char** argv) {
+int main(int argc, char** argv)//object_id : main1
+{
     glutInit(&argc, argv);
     glutInitWindowSize(640, 640);
     glutCreateWindow("GeoGebra Drawing");
